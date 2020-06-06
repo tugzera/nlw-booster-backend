@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "842bb249-b8f3-40ed-848d-9c4cb017e7f6",
+		"name": "NLW - Booster",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Points",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Campeao Coleta\",\n    \"email\": \"campeao@teste.com\",\n    \"whatsapp\": \"64999250133\",\n    \"latitude\": -15.457879,\n    \"longitude\": 10.1647979,\n    \"city\": \"Rio Verde\",\n    \"uf\": \"GO\",\n    \"items\": [1,2,6]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/points",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"points"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{app_url}}/points/3",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"points",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{app_url}}/points?city=Rio Verde&uf=GO&items=1,2,6",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"points"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Rio Verde"
+								},
+								{
+									"key": "uf",
+									"value": "GO"
+								},
+								{
+									"key": "items",
+									"value": "1,2,6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
